@@ -1,2 +1,1 @@
-Solution for training. 
-From Codewars.com & LeetCode
+From Codewars.com & LeetCode or from school.
