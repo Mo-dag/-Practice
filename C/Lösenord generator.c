@@ -20,7 +20,7 @@ från a till z. Siffran 26 ska alltså inte vara hårdkodad i programmet.
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-
+/*
 int main(){
   int letter;
   int n_letter = 'z'-'a'+1; //122-97 = 25 
@@ -35,4 +35,23 @@ int main(){
   }
   putchar('\n');
   return 0;
+}
+*/
+
+// Newer ver:
+int main(){
+
+  srand((unsigned int)time(NULL));
+  int cnt=0;
+  while(cnt<9){
+    int alpha = rand()% ('z'-'a' +1); // Om jag sätta +1 utanför parantes, kommer jag att få från 0 till 25 + 1 >> kommer missa a/A.
+    if(rand()%2){
+      putchar(alpha +'a');
+    }
+    else{putchar(alpha+'A');}
+
+    cnt++;
+  }
+  return 0;
+
 }
